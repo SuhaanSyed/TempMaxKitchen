@@ -1,9 +1,9 @@
 import RPi.GPIO as GPIO
-sensorPin = 16 # the gpio pin number
+sensorPin = 23 # the gpio pin number
 
 #GPIO setup
 GPIO.setwarnings(True)
-GPIO.setmode(GPIO.BOARD) 
+GPIO.setmode(GPIO.BCM) 
 GPIO.setup(sensorPin, GPIO.IN, GPIO.PUD_DOWN) # sets the pin number as input
 
 if GPIO.input(sensorPin) == 1: # if motion is detected
